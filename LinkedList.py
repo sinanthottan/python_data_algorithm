@@ -83,6 +83,15 @@ class LinkedList:
             itr = itr.next
             count+=1
 
+    def list_with_input(self,data):
+        self.head = None
+        for i in data:
+            self.insert_at_end(i)
+
+    def counter_with_limit(self,data,limit):
+        self.head = None
+        for i in range(data,limit):
+            self.insert_at_end(i)
 
 
 
@@ -90,5 +99,7 @@ if __name__ == '__main__':
     ll = LinkedList()
     ll.create_list([1,2,3,4,5,9,10])
     print(ll.get_length())
-    ll.add_at(6,4)
+    ll.list_with_input(input('Enter an array'))
+    ll.printer()
+    ll.counter_with_limit(0,11)
     ll.printer()
